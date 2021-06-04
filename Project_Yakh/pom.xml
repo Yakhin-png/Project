@@ -3,7 +3,6 @@
   <groupId>Project_Yakh</groupId>
   <artifactId>Project_Yakh</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Project_Yakh</name>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>

@@ -1,6 +1,5 @@
 
 import static org.junit.jupiter.api.Assertions.*;
-import main.java.PipsPointsCalc;
 import org.junit.jupiter.api.Test;
 
 class PipsPointsCalcTest {

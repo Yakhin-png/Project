@@ -3,8 +3,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import main.java.FibonacciCalc;
-
 import java.util.*;
 
 class FibonacciCalcTest {

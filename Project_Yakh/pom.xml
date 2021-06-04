@@ -20,7 +20,8 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>src/main/java/Autorization.java</mainClass>
+            <addClasspath>true</addClasspath>
+              <mainClass>Autorization</mainClass>
             </manifest>
           </archive>
         </configuration>

@@ -62,7 +62,7 @@ public class Autorization extends JFrame {
 		login.setHorizontalAlignment(JTextField.CENTER);
 		login.setFont(secondfont);
 		
-		sc = new Scanner(new File("src/main/resources/pass.txt"));
+		sc = new Scanner(new File("src/main/resource/pass.txt"));
 		
 		String hintlogin = "Логин";
 		login.addFocusListener(new FocusAdapter() {
@@ -121,7 +121,7 @@ public class Autorization extends JFrame {
 				int count1 = 0;
 				String password = new String(pass.getPassword());
 				try {					
-					File file = new File("src/main/resources/pass.txt"); //Добавление файла из которого считываются логины				
+					File file = new File("src/main/resource/pass.txt"); //Добавление файла из которого считываются логины				
 					FileReader fr = new FileReader(file); // создаем объект FileReader для объекта File					
 					BufferedReader reader = new BufferedReader(fr); // создаем BufferedReader с существующего FileReader для построчного считывания				
 					String line = reader.readLine(); // считаем сначала первую строку
@@ -142,7 +142,7 @@ public class Autorization extends JFrame {
 					}
 					reader.close();
 							
-					File file1 = new File("src/main/resources/pass.txt"); //Добавление файла из которого считываются пароли							
+					File file1 = new File("src/main/resource/pass.txt"); //Добавление файла из которого считываются пароли							
 					FileReader fr1 = new FileReader(file1); // создаем объект FileReader для объекта File							
 					BufferedReader reader1 = new BufferedReader(fr1); // создаем BufferedReader с существующего FileReader для построчного считывания							
 					String line1 = reader1.readLine(); // считаем сначала первую строку

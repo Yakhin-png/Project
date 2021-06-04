@@ -20,7 +20,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>Autorization</mainClass>
+              <mainClass>src/main/java/Autorization.java</mainClass>
             </manifest>
           </archive>
         </configuration>

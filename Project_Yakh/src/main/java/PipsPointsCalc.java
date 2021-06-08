@@ -75,7 +75,7 @@ public class PipsPointsCalc extends JFrame {
 
 	}
 	
-	public static Float PipsFormule(float Current, float Trade) {
+	public Float PipsFormule(float Current, float Trade) {
 		Float result = 0.0F;
 		result = 0.0001F/Current*Trade;
 		return result;

@@ -1,14 +1,14 @@
 
-import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import static org.junit.Assert.assertTrue;
 
-class FibonacciCalcTest {
+import org.junit.Test;
+
+public class FibonacciCalcTest {
 
 	@Test
-	void test() {
+	public void test() {
 		FibonacciCalc fib = new FibonacciCalc();
 		
 		Float high = 11000F;

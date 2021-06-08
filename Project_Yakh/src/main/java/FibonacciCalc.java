@@ -133,7 +133,7 @@ public class FibonacciCalc extends JFrame {
 
 	}
 	
-	public static String SwitchStyle(float highnum, float lownum, double persent) {
+	public String SwitchStyle(float highnum, float lownum, double persent) {
 		result = new String("");
 		result = (String.valueOf( Math.ceil(((highnum-lownum)/100*persent+lownum)*Math.pow(10, 4))/Math.pow(10, 4)) );
 		return result;

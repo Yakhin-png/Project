@@ -32,6 +32,8 @@ public class Autorization extends JFrame {
 	static int col;
 	private Scanner sc;
 	static String user;
+	FileReader fr;
+	FileReader fr1;
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		new Autorization();
@@ -62,7 +64,7 @@ public class Autorization extends JFrame {
 		login.setHorizontalAlignment(JTextField.CENTER);
 		login.setFont(secondfont);
 		
-		sc = new Scanner(new File("src/main/resource/pass.txt"));
+		//sc = new Scanner(new File("src/main/resource/pass.txt"));
 		
 		String hintlogin = "Логин";
 		login.addFocusListener(new FocusAdapter() {
@@ -122,7 +124,11 @@ public class Autorization extends JFrame {
 				String password = new String(pass.getPassword());
 				try {					
 					File file = new File("src/main/resource/pass.txt"); //Добавление файла из которого считываются логины				
-					FileReader fr = new FileReader(file); // создаем объект FileReader для объекта File					
+					if(file.exists() && !file.isDirectory()) { 
+						
+					
+					fr = new FileReader(file);
+					
 					BufferedReader reader = new BufferedReader(fr); // создаем BufferedReader с существующего FileReader для построчного считывания				
 					String line = reader.readLine(); // считаем сначала первую строку
 					int id = 0;
@@ -143,7 +149,9 @@ public class Autorization extends JFrame {
 					reader.close();
 							
 					File file1 = new File("src/main/resource/pass.txt"); //Добавление файла из которого считываются пароли							
-					FileReader fr1 = new FileReader(file1); // создаем объект FileReader для объекта File							
+					
+					fr1 = new FileReader(file1);
+					
 					BufferedReader reader1 = new BufferedReader(fr1); // создаем BufferedReader с существующего FileReader для построчного считывания							
 					String line1 = reader1.readLine(); // считаем сначала первую строку
 
@@ -180,12 +188,24 @@ public class Autorization extends JFrame {
 								}
 							}
 					}
+					
+					}
+					else {
+						if (pass.getText().equals("123") && login.getText().equals("quest")) {
+							dispose(); //закрывает окно
+							user = login.getText();
+							new Main();
+						}
+					}
+					
+					
 				} catch (FileNotFoundException e1) {
 					e1.printStackTrace();
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
-			}  	                             
+			}  	     
+			
 	}); 		
 		setVisible(true);
 		enter.transferFocus(); 
